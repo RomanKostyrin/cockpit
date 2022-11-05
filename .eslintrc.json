@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:import/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["import", "react",  "@typescript-eslint"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "react/react-in-jsx-scope": 0,
+    "import/named": 0,
+    "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "max-lines-per-function": [
+      "error",
+      {
+        "max": 120,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ]
+  },
+  "globals": {
+    "React": true,
+    "JSX": true,
+    "jsdom": true
+  },  
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
